@@ -34,10 +34,14 @@
       text-decoration: none;
       margin-top: 10px;
     }
+    .button:hover {
+      background-color: #005fa3;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Verse of the Day -->
   <section class="card">
     <h1>Verse of the Day</h1>
     <p>(Psalm 139:13–16 ESV) You are fearfully and wonderfully made. Your days were written before one began.</p>
@@ -53,15 +57,29 @@
     </p>
   </section>
 
+  <!-- Prayer -->
   <section class="card">
     <h2>Prayer</h2>
-    <p>Dear Lord, I thank you for writing my story before time began. Help me to rest in the assurance that Your plans for me are good. Let my heart be anxious for nothing and replace my uncertainty with a deep, abiding faith in Your sovereign will for my life. Amen.</p>
+    <p>
+      Dear Lord, I thank you for writing my story before time began. 
+      Help me to rest in the assurance that Your plans for me are good. 
+      Let my heart be anxious for nothing and replace my uncertainty with a deep, abiding faith in Your sovereign will for my life. Amen.
+    </p>
   </section>
 
+  <!-- Connect -->
   <section class="card">
     <h2>Connect with Us</h2>
     <a class="button" href="https://wa.me/12845443333">Message on WhatsApp</a>
   </section>
+
+  <!-- Auto Refresh Script -->
+  <script>
+    // Refresh the page every 60 seconds
+    setInterval(() => {
+      location.reload();
+    }, 60000);
+  </script>
 
 </body>
 </html>
