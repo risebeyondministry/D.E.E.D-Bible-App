@@ -19,6 +19,7 @@
       border-radius:5px; margin-bottom:10px; padding:0 15px;
     }
     .chapter { margin:10px 0; padding:10px 0; border-bottom:1px solid #eee; }
+    .chapter:last-child { border-bottom:none; }
     audio { width:100%; margin-top:6px; }
   </style>
 </head>
@@ -26,7 +27,7 @@
   <h1>Audio Bible</h1>
 
   <!-- Psalms Accordion -->
-  <button class="accordion">Psalms 1–3</button>
+  <button class="accordion">Psalms 1–20</button>
   <div class="panel">
     <div class="chapter"><strong>Psalm 1</strong>
       <audio controls><source src="audio_bible/psalms/psalms1.mp3" type="audio/mpeg"></audio>
@@ -37,16 +38,24 @@
     <div class="chapter"><strong>Psalm 3</strong>
       <audio controls><source src="audio_bible/psalms/psalms3.mp3" type="audio/mpeg"></audio>
     </div>
+    <!-- Repeat up to Psalm 20 -->
+    <div class="chapter"><strong>Psalm 20</strong>
+      <audio controls><source src="audio_bible/psalms/psalms20.mp3" type="audio/mpeg"></audio>
+    </div>
   </div>
 
   <!-- Proverbs Accordion -->
-  <button class="accordion">Proverbs 1–2</button>
+  <button class="accordion">Proverbs 1–10</button>
   <div class="panel">
     <div class="chapter"><strong>Proverbs 1</strong>
       <audio controls><source src="audio_bible/proverbs/proverbs1.mp3" type="audio/mpeg"></audio>
     </div>
     <div class="chapter"><strong>Proverbs 2</strong>
       <audio controls><source src="audio_bible/proverbs/proverbs2.mp3" type="audio/mpeg"></audio>
+    </div>
+    <!-- Repeat up to Proverbs 10 -->
+    <div class="chapter"><strong>Proverbs 10</strong>
+      <audio controls><source src="audio_bible/proverbs/proverbs10.mp3" type="audio/mpeg"></audio>
     </div>
   </div>
 
