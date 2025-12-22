@@ -1,62 +1,165 @@
-<h2>Psalms Audio</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audio Bible</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 20px;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .accordion {
+      background-color: #0077cc;
+      color: white;
+      cursor: pointer;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+    .active, .accordion:hover {
+      background-color: #005fa3;
+    }
+    .panel {
+      padding: 0 15px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .chapter {
+      margin: 10px 0;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    audio {
+      width: 100%;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Audio Bible</h1>
 
-<div class="chapter"><strong>Psalm 001</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 001.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 002</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 002.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 003</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 003.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 004</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 004.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 005</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 005.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 006</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 006.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 007</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 007.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 008</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 008.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 009</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 009.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 010</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 010.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 011</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 011.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 012</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 012.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 013</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 013.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 014</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 014.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 015</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 015.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 016</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 016.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 017</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 017.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 018</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 018.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 019</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 019.mp3" type="audio/mpeg"></audio>
-</div>
-<div class="chapter"><strong>Psalm 020</strong>
-  <audio controls><source src="audio_bible/psalms/Psalm 020.mp3" type="audio/mpeg"></audio>
-</div>
+  <!-- Psalms Accordion -->
+  <button class="accordion">Psalms 001–020</button>
+  <div class="panel">
+    <div class="chapter"><strong>Psalm 001</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 001.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 002</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 002.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 003</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 003.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 004</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 004.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 005</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 005.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 006</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 006.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 007</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 007.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 008</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 008.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 009</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 009.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 010</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 010.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 011</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 011.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 012</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 012.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 013</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 013.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 014</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 014.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 015</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 015.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 016</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 016.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 017</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 017.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 018</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 018.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 019</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 019.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Psalm 020</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 020.mp3" type="audio/mpeg"></audio>
+    </div>
+  </div>
+
+  <!-- Proverbs Accordion -->
+  <button class="accordion">Proverbs 001–010</button>
+  <div class="panel">
+    <div class="chapter"><strong>Proverbs 001</strong>
+      <audio controls><source src="audio_bible/proverbs/Proverbs 01.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Proverbs 002</strong>
+      <audio controls><source src="audio_bible/proverbs/Proverbs 02.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Proverbs 003</strong>
+      <audio controls><source src="audio_bible/proverbs/Proverbs 03.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Proverbs 004</strong>
+      <audio controls><source src="audio_bible/proverbs/Proverbs 04.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Proverbs 005</strong>
+      <audio controls><source src="audio_bible/proverbs/Proverbs 05.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Proverbs 006</strong>
+      <audio controls><source src="audio_bible/proverbs/Proverbs 06.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Proverbs 007</strong>
+      <audio controls><source src="audio_bible/proverbs/Proverbs 07.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Proverbs 008</strong>
+      <audio controls><source src="audio_bible/proverbs/Proverbs 08.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Proverbs 009</strong>
+      <audio controls><source src="audio_bible/proverbs/Proverbs 09.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="chapter"><strong>Proverbs 010</strong>
+      <audio controls><source src="audio_bible/proverbs/Proverbs 10.mp3" type="audio/mpeg"></audio>
+    </div>
+  </div>
+
+  <script>
+    // Accordion toggle script
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight
