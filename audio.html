@@ -68,133 +68,41 @@
   <h1>Audio Bible</h1>
 
   <!-- Psalms Accordion -->
-  <button class="accordion">Psalms 001–020</button>
+  <button class="accordion">Psalms 1–20</button>
   <div class="panel">
-    <div class="chapter"><strong>Psalm 001</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 001.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 002</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 002.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 003</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 003.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 004</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 004.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 005</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 005.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 006</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 006.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 007</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 007.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 008</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 008.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 009</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 009.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 010</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 010.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 011</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 011.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 012</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 012.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 013</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 013.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 014</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 014.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 015</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 015.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 016</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 016.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 017</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 017.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 018</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 018.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 019</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 019.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Psalm 020</strong>
-      <audio controls><source src="audio_bible/psalms/Psalm 020.mp3" type="audio/mpeg"></audio>
-    </div>
+    <!-- Psalms 1–20 -->
+    ${[...Array(20)].map((_, i) => {
+      const num = i + 1;
+      return `<div class="chapter"><strong>Psalm ${num}</strong>
+        <audio controls><source src="audio_bible/psalms/psalms${num}.mp3" type="audio/mpeg"></audio>
+      </div>`;
+    }).join('\n')}
   </div>
 
   <!-- Proverbs Accordion -->
-  <button class="accordion">Proverbs 001–010</button>
+  <button class="accordion">Proverbs 1–10</button>
   <div class="panel">
-    <div class="chapter"><strong>Proverbs 001</strong>
-      <audio controls><source src="audio_bible/proverbs/Proverbs 01.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Proverbs 002</strong>
-      <audio controls><source src="audio_bible/proverbs/Proverbs 02.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Proverbs 003</strong>
-      <audio controls><source src="audio_bible/proverbs/Proverbs 03.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Proverbs 004</strong>
-      <audio controls><source src="audio_bible/proverbs/Proverbs 04.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Proverbs 005</strong>
-      <audio controls><source src="audio_bible/proverbs/Proverbs 05.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Proverbs 006</strong>
-      <audio controls><source src="audio_bible/proverbs/Proverbs 06.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Proverbs 007</strong>
-      <audio controls><source src="audio_bible/proverbs/Proverbs 07.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Proverbs 008</strong>
-      <audio controls><source src="audio_bible/proverbs/Proverbs 08.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Proverbs 009</strong>
-      <audio controls><source src="audio_bible/proverbs/Proverbs 09.mp3" type="audio/mpeg"></audio>
-    </div>
-    <div class="chapter"><strong>Proverbs 010</strong>
-      <audio controls><source src="audio_bible/proverbs/Proverbs 10.mp3" type="audio/mpeg"></audio>
-    </div>
+    <!-- Proverbs 1–10 -->
+    ${[...Array(10)].map((_, i) => {
+      const num = i + 1;
+      return `<div class="chapter"><strong>Proverbs ${num}</strong>
+        <audio controls><source src="audio_bible/proverbs/proverbs${num}.mp3" type="audio/mpeg"></audio>
+      </div>`;
+    }).join('\n')}
   </div>
 
   <script>
-    // Accordion toggle script
-    const accordions = document.getElementsByClassName("accordion");
-    for (let i = 0; i < accordions.length; i++) {
-      accordions[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
+    document.querySelectorAll(".accordion").forEach(button => {
+      button.addEventListener("click", () => {
+        button.classList.toggle("active");
+        const panel = button.nextElementSibling;
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
         } else {
           panel.style.maxHeight = panel.scrollHeight + "px";
         }
       });
-    }
-  </script>
-<script>
-  document.querySelectorAll(".accordion").forEach(button => {
-    button.addEventListener("click", () => {
-      button.classList.toggle("active");
-      const panel = button.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
     });
-  });
-</script>
-
+  </script>
 </body>
 </html>
