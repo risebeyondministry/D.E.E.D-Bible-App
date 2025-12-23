@@ -85,7 +85,7 @@
   <option value="audio_bible/psalms/Psalm 074.mp3">Psalm 74</option>
   <option value="audio_bible/psalms/Psalm 075.mp3">Psalm 75</option>
   <option value="audio_bible/psalms/Psalm 076.mp3">Psalm 76</option>
-    <option value="audio_bible/psalms/Psalm 077.mp3">Psalm 77</option>
+  <option value="audio_bible/psalms/Psalm 077.mp3">Psalm 77</option>
   <option value="audio_bible/psalms/Psalm 078.mp3">Psalm 78</option>
   <option value="audio_bible/psalms/Psalm 079.mp3">Psalm 79</option>
   <option value="audio_bible/psalms/Psalm 080.mp3">Psalm 80</option>
@@ -177,8 +177,9 @@
     // Change track when dropdown changes
     select.addEventListener("change", () => {
       player.src = select.value;
-      player.play();
+      // Removed player.play() so user controls playback manually
     });
   </script>
 </body>
 </html>
+
