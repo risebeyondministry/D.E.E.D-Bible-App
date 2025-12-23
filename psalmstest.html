@@ -3,15 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <title>Audio Bible</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f4f4f4; margin:20px; }
+    h1 { color:#2c3e50; }
+    .accordion {
+      background:#0077cc; color:white; cursor:pointer;
+      padding:12px; width:100%; border:none; text-align:left;
+      font-size:16px; border-radius:5px; margin-bottom:5px;
+    }
+    .active, .accordion:hover { background:#005fa3; }
+    .panel {
+      background:white; max-height:0; overflow:hidden;
+      transition:max-height 0.2s ease-out;
+      border-radius:5px; margin-bottom:10px; padding:0 15px;
+    }
+    .chapter { margin:10px 0; padding:10px 0; border-bottom:1px solid #eee; }
+    .chapter:last-child { border-bottom:none; }
+    audio { width:100%; margin-top:6px; }
+  </style>
 </head>
 <body>
-  <h1>Psalm  Test</h1>
-  <audio controls>
-    <!-- Notice the space encoded as %20 -->
-    <source src="audio_bible/psalms/Psalm 091.mp3" type="audio/mpeg">
-    <source src="audio_bible/psalms/Psalm 051.mp3" type="audio/mpeg">
-    <source src="audio_bible/psalms/Psalm 101.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+  <h1>Psalm Test</h1>
+
+  <!-- Accordion for 3 Psalms -->
+  <button class="accordion">Test Psalms (91, 51, 101)</button>
+  <div class="panel">
+    <div class="chapter"><strong>Psalm 91</strong>
+      <audio controls>
+        <source src="audio_bible/psalms/Psalm 091.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <div class="chapter"><strong>Psalm 51</strong>
+      <audio controls>
+        <source src="audio_bible/psalms/Psalm 051.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <div class="chapter"><strong>Psalm 101</strong>
+      <audio controls>
+        <source src="audio_bible/psalms/Psalm 101.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll(".accordion").forEach(button => {
+      button.addEventListener("click", () => {
+        button.classList.toggle("active");
+        const panel = button.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
+
