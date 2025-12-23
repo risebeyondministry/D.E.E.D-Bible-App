@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Audio Bible</title>
   <style>
     body { font-family: Arial, sans-serif; background:#f4f4f4; margin:20px; }
@@ -26,118 +25,22 @@
 <body>
   <h1>Audio Bible</h1>
 
- <!-- Psalms 1–20 -->
-<button class="accordion">Psalms 1–20</button>
-<div class="panel">
-  <div class="chapter"><strong>Psalm 1</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm001.mp3" type="audio/mpeg"></audio>
-  </div>
-  <div class="chapter"><strong>Psalm 2</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm002.mp3" type="audio/mpeg"></audio>
-  </div>
-  <!-- Repeat pattern -->
-  <div class="chapter"><strong>Psalm 20</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm020.mp3" type="audio/mpeg"></audio>
-  </div>
-</div>
-
-<!-- Psalms 21–40 -->
-<button class="accordion">Psalms 21–40</button>
-<div class="panel">
-  <div class="chapter"><strong>Psalm 21</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm021.mp3" type="audio/mpeg"></audio>
-  </div>
-  <!-- Repeat pattern -->
-  <div class="chapter"><strong>Psalm 40</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm040.mp3" type="audio/mpeg"></audio>
-  </div>
-</div>
-
-<!-- Psalms 41–60 -->
-<button class="accordion">Psalms 41–60</button>
-<div class="panel">
-  <div class="chapter"><strong>Psalm 41</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm041.mp3" type="audio/mpeg"></audio>
-  </div>
-  <!-- Repeat pattern -->
-  <div class="chapter"><strong>Psalm 60</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm060.mp3" type="audio/mpeg"></audio>
-  </div>
-</div>
-
-<!-- Psalms 61–80 -->
-<button class="accordion">Psalms 61–80</button>
-<div class="panel">
-  <div class="chapter"><strong>Psalm 61</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm061.mp3" type="audio/mpeg"></audio>
-  </div>
-  <!-- Repeat pattern -->
-  <div class="chapter"><strong>Psalm 80</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm080.mp3" type="audio/mpeg"></audio>
-  </div>
-</div>
-
-<!-- Psalms 81–100 -->
-<button class="accordion">Psalms 81–100</button>
-<div class="panel">
-  <div class="chapter"><strong>Psalm 81</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm081.mp3" type="audio/mpeg"></audio>
-  </div>
-  <!-- Repeat pattern -->
-  <div class="chapter"><strong>Psalm 100</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm100.mp3" type="audio/mpeg"></audio>
-  </div>
-</div>
-
-<!-- Psalms 101–120 -->
-<button class="accordion">Psalms 101–120</button>
-<div class="panel">
-  <div class="chapter"><strong>Psalm 101</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm101.mp3" type="audio/mpeg"></audio>
-  </div>
-  <!-- Repeat pattern -->
-  <div class="chapter"><strong>Psalm 120</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm120.mp3" type="audio/mpeg"></audio>
-  </div>
-</div>
-
-<!-- Psalms 121–140 -->
-<button class="accordion">Psalms 121–140</button>
-<div class="panel">
-  <div class="chapter"><strong>Psalm 121</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm121.mp3" type="audio/mpeg"></audio>
-  </div>
-  <!-- Repeat pattern -->
-  <div class="chapter"><strong>Psalm 140</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm140.mp3" type="audio/mpeg"></audio>
-  </div>
-</div>
-
-<!-- Psalms 141–150 -->
-<button class="accordion">Psalms 141–150</button>
-<div class="panel">
-  <div class="chapter"><strong>Psalm 141</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm141.mp3" type="audio/mpeg"></audio>
-  </div>
-  <!-- Repeat pattern -->
-  <div class="chapter"><strong>Psalm 150</strong>
-    <audio controls><source src="audio_bible/psalms/Psalm150.mp3" type="audio/mpeg"></audio>
-  </div>
-</div>
-
-
-  <!-- Proverbs Accordion -->
-  <button class="accordion">Proverbs 1–10</button>
+  <!-- Psalms Accordion -->
+  <button class="accordion">Psalms 1–151</button>
   <div class="panel">
-    <div class="chapter"><strong>Proverbs 1</strong>
-      <audio controls><source src="audio_bible/proverbs/proverbs1.mp3" type="audio/mpeg"></audio>
+    <!-- Loop through all 151 Psalms -->
+    <div class="chapter"><strong>Psalm 1</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 001.mp3" type="audio/mpeg"></audio>
     </div>
-    <div class="chapter"><strong>Proverbs 2</strong>
-      <audio controls><source src="audio_bible/proverbs/proverbs2.mp3" type="audio/mpeg"></audio>
+    <div class="chapter"><strong>Psalm 2</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 002.mp3" type="audio/mpeg"></audio>
     </div>
-    <!-- Repeat up to Proverbs 10 -->
-    <div class="chapter"><strong>Proverbs 10</strong>
-      <audio controls><source src="audio_bible/proverbs/proverbs10.mp3" type="audio/mpeg"></audio>
+    <div class="chapter"><strong>Psalm 3</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 003.mp3" type="audio/mpeg"></audio>
+    </div>
+    <!-- … repeat pattern for each Psalm … -->
+    <div class="chapter"><strong>Psalm 151</strong>
+      <audio controls><source src="audio_bible/psalms/Psalm 151.mp3" type="audio/mpeg"></audio>
     </div>
   </div>
 
