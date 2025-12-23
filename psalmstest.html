@@ -2,61 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Audio Bible</title>
-  <style>
-    body { font-family: Arial, sans-serif; background:#f4f4f4; margin:20px; }
-    h1 { color:#2c3e50; }
-    .accordion {
-      background:#0077cc; color:white; cursor:pointer;
-      padding:12px; width:100%; border:none; text-align:left;
-      font-size:16px; border-radius:5px; margin-bottom:5px;
-    }
-    .active, .accordion:hover { background:#005fa3; }
-    .panel {
-      background:white; max-height:0; overflow:hidden;
-      transition:max-height 0.2s ease-out;
-      border-radius:5px; margin-bottom:10px; padding:0 15px;
-    }
-    .chapter { margin:10px 0; padding:10px 0; border-bottom:1px solid #eee; }
-    .chapter:last-child { border-bottom:none; }
-    audio { width:100%; margin-top:6px; }
-  </style>
+  <title>Audio Bible Playlist</title>
 </head>
 <body>
-  <!-- Title for the section -->
-  <h1>The Book of Psalms</h1>
+  <h1>Psalm Playlist</h1>
 
-  <!-- Accordion for Psalms -->
-  <button class="accordion">Psalms Test (91, 51, 101)</button>
-  <div class="panel">
-    <div class="chapter"><strong>Psalm 91</strong>
-      <audio controls>
-        <source src="audio_bible/psalms/Psalm 091.mp3" type="audio/mpeg">
-      </audio>
-    </div>
-    <div class="chapter"><strong>Psalm 51</strong>
-      <audio controls>
-        <source src="audio_bible/psalms/Psalm 051.mp3" type="audio/mpeg">
-      </audio>
-    </div>
-    <div class="chapter"><strong>Psalm 101</strong>
-      <audio controls>
-        <source src="audio_bible/psalms/Psalm 101.mp3" type="audio/mpeg">
-      </audio>
-    </div>
-  </div>
+  <!-- Dropdown to select Psalm -->
+  <select id="trackSelect">
+    <option value="audio_bible/psalms/Psalm 091.mp3">Psalm 91</option>
+    <option value="audio_bible/psalms/Psalm 051.mp3">Psalm 51</option>
+    <option value="audio_bible/psalms/Psalm 101.mp3">Psalm 101</option>
+  </select>
+
+  <!-- Single audio player -->
+  <audio id="player" controls></audio>
 
   <script>
-    document.querySelectorAll(".accordion").forEach(button => {
-      button.addEventListener("click", () => {
-        button.classList.toggle("active");
-        const panel = button.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
+    const player = document.getElementById("player");
+    const select = document.getElementById("trackSelect");
+
+    // Load the first track by default
+    player.src = select.value;
+
+    // Change track when dropdown changes
+    select.addEventListener("change", () => {
+      player.src = select.value;
+      player.play();
     });
   </script>
 </body>
