@@ -70,8 +70,26 @@
   <!-- Audio Bible -->
   <section class="card">
     <h2>Audio Bible</h2>
-    <p>Listen to Psalms and Proverbs chapter by chapter.</p>
-    <a class="button" href="audio.html">Open Audio Bible</a>
+    <p>Listen to Psalms chapter by chapter.</p>
+
+    <select id="trackSelect">
+      <option value="audio_bible/psalms/Psalm 001.mp3">Psalm 1</option>
+      <option value="audio_bible/psalms/Psalm 002.mp3">Psalm 2</option>
+      <!-- …continue through Psalm 150… -->
+      <option value="audio_bible/psalms/Psalm 150.mp3">Psalm 150</option>
+    </select>
+
+    <audio id="player" controls></audio>
+
+    <script>
+      const player = document.getElementById("player");
+      const select = document.getElementById("trackSelect");
+      player.src = select.value;
+      select.addEventListener("change", () => {
+        player.src = select.value;
+        player.play();
+      });
+    </script>
   </section>
 
   <!-- Connect -->
