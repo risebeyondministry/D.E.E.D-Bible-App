@@ -9,15 +9,11 @@
 
   <!-- Dropdown to select Psalm -->
   <select id="trackSelect">
-  <option value="https://risebeyondministry.github.io/D.E.E.D-Bible-App/devotionals/Psalm 001.mp3">Psalm 1</option>
-  <option value="https://risebeyondministry.github.io/D.E.E.D-Bible-App/devotionals/Psalm 002.mp3">Psalm 2</option>
-  <option value="https://risebeyondministry.github.io/D.E.E.D-Bible-App/devotionals/Psalm 003.mp3">Psalm 3</option>
-  <option value="https://risebeyondministry.github.io/D.E.E.D-Bible-App/devotionals/Psalm 004.mp3">Psalm 4</option>
-  <option value="https://risebeyondministry.github.io/D.E.E.D-Bible-App/devotionals/Psalm 005.mp3">Psalm 5</option>
-</select>
-
-
-
+    <option value="Psalm001.mp3">Psalm 1</option>
+    <option value="Psalm002.mp3">Psalm 2</option>
+    <option value="Psalm003.mp3">Psalm 3</option>
+    <!-- continue up to Psalm150 -->
+    <option value="Psalm150.mp3">Psalm 150</option>
   </select>
 
   <!-- Single audio player -->
@@ -33,9 +29,8 @@
     // Change track when dropdown changes
     select.addEventListener("change", () => {
       player.src = select.value;
-      // Removed player.play() so user controls playback manually
+      // playback controlled manually by user
     });
   </script>
 </body>
 </html>
-
