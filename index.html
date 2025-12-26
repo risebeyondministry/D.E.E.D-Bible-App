@@ -108,22 +108,18 @@
   <option value="devotionals/Psalm 003.mp3">Psalm 3</option>
 </select>
 
-  <!-- Single audio player -->
-  <audio id="player" controls></audio>
+<audio id="player" controls></audio>
 
-  <script>
-    const player = document.getElementById("player");
-    const select = document.getElementById("trackSelect");
+<script>
+  const select = document.getElementById("trackSelect");
+  const player = document.getElementById("player");
 
-    // Load the first track by default
+  select.addEventListener("change", () => {
     player.src = select.value;
+    player.play();
+  });
+</script>
 
-    // Change track when dropdown changes
-    select.addEventListener("change", () => {
-      player.src = select.value;
-      player.play();
-    });
-  </script>
 </body>
 </html>
 
