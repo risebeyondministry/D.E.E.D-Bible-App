@@ -1,6 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEED MINISTRY Bible App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    .small {
+      font-size: 0.9em;
+      color: #555;
+    }
+    .button {
+      display: inline-block;
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Verse of the Day -->
+  <section class="card">
+    <h1>Verse of the Day</h1>
+    <p>(Psalm 139:13–16 ESV) You are fearfully and wonderfully made. Your days were written before one began.</p>
+  </section>
+
+  <!-- RiseXpressionzz Devotional -->
+  <section class="card">
+    <h2>RiseXpressionzz Devotional — Day 1</h2>
+    <img src="devotionals/day1.jpg" alt="God's Got You Covered Devotional" 
+         style="width:100%; border-radius:10px; margin-top:10px;" />
+    <p class="small" style="margin-top:8px;">
+      Reflection: How will you view today’s challenges knowing your life is part of God’s pre-written plan?
+    </p>
+  </section>
+
+  <!-- Prayer -->
+  <section class="card">
+    <h2>Prayer</h2>
+    <p>
+      Dear Lord, I thank you for writing my story before time began. 
+      Help me to rest in the assurance that Your plans for me are good. 
+      Let my heart be anxious for nothing and replace my uncertainty with a deep, abiding faith in Your sovereign will for my life. Amen.
+    </p>
+  </section>
+
+        <script>
+      const player = document.getElementById("player");
+      const select = document.getElementById("trackSelect");
+      player.src = select.value;
+      select.addEventListener("change", () => {
+        player.src = select.value;
+        player.play();
+      });
+    </script>
+  </section>
+
+  <!-- Connect -->
+  <section class="card">
+    <h2>Connect with Us</h2>
+    <a class="button" href="https://wa.me/12845443333">Message on WhatsApp</a>
+  </section>
+
+  <!-- Auto Refresh Script -->
+  <script>
+    // Refresh the page every 60 seconds
+    setInterval(() => {
+      location.reload();
+    }, 60000);
+  </script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <title>The Book of Psalms</title>
 </head>
