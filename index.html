@@ -67,15 +67,18 @@
     </p>
   </section>
 
-        <script>
-      const player = document.getElementById("player");
-      const select = document.getElementById("trackSelect");
-      player.src = select.value;
-      select.addEventListener("change", () => {
-        player.src = select.value;
-        player.play();
-      });
-    </script>
+  <!-- Psalms Audio Player -->
+  <section class="card">
+    <h2>The Book of Psalms</h2>
+    <select id="trackSelect">
+      <option value="">-- Select a Psalm --</option>
+      <option value="devotionals/Psalm 001.mp3">Psalm 1</option>
+      <option value="devotionals/Psalm 002.mp3">Psalm 2</option>
+      <option value="devotionals/Psalm 003.mp3">Psalm 3</option>
+      <option value="devotionals/Psalm 004.mp3">Psalm 4</option>
+      <!-- Expand here up to Psalm 150 -->
+    </select>
+    <audio id="player" controls></audio>
   </section>
 
   <!-- Connect -->
@@ -84,38 +87,24 @@
     <a class="button" href="https://wa.me/12845443333">Message on WhatsApp</a>
   </section>
 
-  <!-- Auto Refresh Script -->
+  <!-- Scripts -->
   <script>
+    const player = document.getElementById("player");
+    const select = document.getElementById("trackSelect");
+
+    select.addEventListener("change", () => {
+      if (select.value) {
+        player.src = select.value;
+        player.load();
+        player.play();
+      }
+    });
+
     // Refresh the page every 60 seconds
     setInterval(() => {
       location.reload();
     }, 60000);
   </script>
-
-</body>
-</html>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>The Book of Psalms</title>
-</head>
-<body>
-  <h1>The Book of Psalms</h1>
-
-  <!-- Dropdown to select Psalm -->
-  <select onchange="document.getElementById('player').src=this.value">
-  <option value="">-- Select a Psalm --</option>
-  <option value="devotionals/Psalm 001.mp3">Psalm 1</option>
-  <option value="devotionals/Psalm 002.mp3">Psalm 2</option>
-  <option value="devotionals/Psalm 003.mp3">Psalm 3</option>
-  <option value="devotionals/Psalm 004.mp3">Psalm 4</option>
-</select>
-
-<audio id="player" controls></audio>
 
 </body>
 </html>
