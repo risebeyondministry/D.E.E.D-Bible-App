@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Psalms Test</title>
+  <title>The Book of Psalms</title>
 </head>
 <body>
-  <h1>Psalms Test Player</h1>
+  <h1>The Book of Psalms</h1>
 
+  <!-- Dropdown to select Psalm -->
   <select onchange="document.getElementById('player').src=this.value">
     <option value="">-- Select a Psalm --</option>
     <option value="devotionals/Psalm 001.mp3">Psalm 1</option>
     <option value="devotionals/Psalm 002.mp3">Psalm 2</option>
     <option value="devotionals/Psalm 003.mp3">Psalm 3</option>
+    <option value="devotionals/Psalm 004.mp3">Psalm 4</option>
   </select>
 
+  <!-- Audio player -->
   <audio id="player" controls></audio>
 </body>
 </html>
