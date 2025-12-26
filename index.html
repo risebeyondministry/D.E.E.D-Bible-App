@@ -99,26 +99,29 @@
   <title>The Book of Psalms</title>
 </head>
 <body>
-  <h1>The Book of Psalms</h1>
+ <h1>The Book of Psalms</h1>
 
-  <!-- Dropdown to select Psalm -->
- <select id="trackSelect">
+<!-- Dropdown to select Psalm -->
+<select id="trackSelect">
   <option value="devotionals/Psalm 001.mp3">Psalm 1</option>
   <option value="devotionals/Psalm 002.mp3">Psalm 2</option>
   <option value="devotionals/Psalm 003.mp3">Psalm 3</option>
 </select>
 
+<!-- Audio player -->
 <audio id="player" controls></audio>
 
 <script>
   const select = document.getElementById("trackSelect");
   const player = document.getElementById("player");
 
+  // When dropdown changes, update audio source
   select.addEventListener("change", () => {
     player.src = select.value;
     player.play();
   });
 </script>
+
 
 </body>
 </html>
