@@ -96,33 +96,42 @@
 </html>
 
 
- <h1>The Book of Psalms</h1>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Book of Psalms</title>
+</head>
+<body>
+  <h1>The Book of Psalms</h1>
 
-<select id="trackSelect">
-  <option value="">-- Select a Psalm --</option>
-  <option value="devotionals/Psalm 001.mp3">Psalm 1</option>
-  <option value="devotionals/Psalm 002.mp3">Psalm 2</option>
-  <option value="devotionals/Psalm 003.mp3">Psalm 3</option>
-</select>
+  <!-- Dropdown to select Psalm -->
+  <select id="trackSelect">
+    <option value="">-- Select a Psalm --</option>
+    <option value="devotionals/Psalm 001.mp3">Psalm 1</option>
+    <option value="devotionals/Psalm 002.mp3">Psalm 2</option>
+    <option value="devotionals/Psalm 003.mp3">Psalm 3</option>
+  </select>
 
-<audio id="player" controls></audio>
+  <!-- Audio player -->
+  <audio id="player" controls></audio>
 
-<script>
-  const select = document.getElementById("trackSelect");
-  const player = document.getElementById("player");
+  <!-- Script to wire dropdown to player -->
+  <script>
+    const select = document.getElementById("trackSelect");
+    const player = document.getElementById("player");
 
-  select.addEventListener("change", function() {
-    if (this.value) {
-      player.src = this.value;
-      player.load();   // reload the file
-      player.play();   // start playback
-    }
-  });
-</script>
-
-
+    select.addEventListener("change", function() {
+      if (this.value) {
+        player.src = this.value;
+        player.load();
+        player.play();
+      }
+    });
+  </script>
 </body>
 </html>
+
 
 
 
