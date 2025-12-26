@@ -125,7 +125,7 @@
   <option value="Psalm 114.mp3">Psalm 114</option>
   <option value="Psalm 115.mp3">Psalm 115</option>
   <option value="Psalm 116.mp3">Psalm 116</option>
-    <option value="Psalm 117.mp3">Psalm 117</option>
+  <option value="Psalm 117.mp3">Psalm 117</option>
   <option value="Psalm 118.mp3">Psalm 118</option>
   <option value="Psalm 119.mp3">Psalm 119</option>
   <option value="Psalm 120.mp3">Psalm 120</option>
@@ -161,26 +161,23 @@
   <option value="Psalm 150.mp3">Psalm 150</option>
 </select>
 
+<!-- Single audio player -->
+<audio id="player" controls></audio>
 
+<script>
+  const player = document.getElementById("player");
+  const select = document.getElementById("trackSelect");
 
-  </select>
+  // Load the first track by default
+  player.src = select.value;
 
-  <!-- Single audio player -->
-  <audio id="player" controls></audio>
-
-  <script>
-    const player = document.getElementById("player");
-    const select = document.getElementById("trackSelect");
-
-    // Load the first track by default
+  // Change track when dropdown changes
+  select.addEventListener("change", () => {
     player.src = select.value;
-
-    // Change track when dropdown changes
-    select.addEventListener("change", () => {
-      player.src = select.value;
-      // Removed player.play() so user controls playback manually
-    });
-  </script>
+    // Removed player.play() so user controls playback manually
+  });
+</script>
 </body>
 </html>
+
 
