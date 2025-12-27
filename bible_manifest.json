@@ -1,34 +1,74 @@
 {
-  "psalms_1_99": {
-    "label": "Psalms (1–99)",
+  "psalms": {
+    "label": "Psalms",
     "folder": "devotionals/psalms",
     "prefix": "Psalm",
-    "start": 1,
-    "end": 99,
-    "padDigits": 3
+    "count": 150
   },
-  "psalms_100_150": {
-    "label": "Psalms (100–150)",
-    "folder": "devotionals/psalms",
-    "prefix": "Psalm",
-    "start": 100,
-    "end": 150,
-    "padDigits": 0
-  },
-  "proverbs_1_9": {
-    "label": "Proverbs (1–9)",
+  "proverbs": {
+    "label": "Proverbs",
     "folder": "devotionals/proverbs",
     "prefix": "Proverbs",
-    "start": 1,
-    "end": 9,
-    "padDigits": 2
+    "count": 31
   },
-  "proverbs_10_31": {
-    "label": "Proverbs (10–31)",
-    "folder": "devotionals/proverbs",
-    "prefix": "Proverbs",
-    "start": 10,
-    "end": 31,
-    "padDigits": 0
+  "matthew": {
+    "label": "Matthew",
+    "folder": "devotionals/newtestament/matthew",
+    "prefix": "Matthew",
+    "count": 28
+  },
+  "mark": {
+    "label": "Mark",
+    "folder": "devotionals/newtestament/mark",
+    "prefix": "Mark",
+    "count": 16
+  },
+  "luke": {
+    "label": "Luke",
+    "folder": "devotionals/newtestament/luke",
+    "prefix": "Luke",
+    "count": 24
+  },
+  "john": {
+    "label": "John",
+    "folder": "devotionals/newtestament/john",
+    "prefix": "John",
+    "count": 21
+  },
+  "acts": {
+    "label": "Acts",
+    "folder": "devotionals/newtestament/acts",
+    "prefix": "Acts",
+    "count": 28
+  },
+  "romans": {
+    "label": "Romans",
+    "folder": "devotionals/newtestament/romans",
+    "prefix": "Romans",
+    "count": 16
+  },
+  "1corinthians": {
+    "label": "1 Corinthians",
+    "folder": "devotionals/newtestament/1corinthians",
+    "prefix": "1Corinthians",
+    "count": 16
+  },
+  "2corinthians": {
+    "label": "2 Corinthians",
+    "folder": "devotionals/newtestament/2corinthians",
+    "prefix": "2Corinthians",
+    "count": 13
+  },
+  "philippians": {
+    "label": "Philippians",
+    "folder": "devotionals/newtestament/philippians",
+    "prefix": "Philippians",
+    "count": 4
+  },
+  "revelation": {
+    "label": "Revelation",
+    "folder": "devotionals/newtestament/revelation",
+    "prefix": "Revelation",
+    "count": 22
   }
 }
