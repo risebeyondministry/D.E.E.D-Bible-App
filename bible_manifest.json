@@ -1,10 +1,11 @@
 {
-  "psalms": {
-    "label": "Psalms",
-    "folder": "devotionals/psalms",
-    "prefix": "Psalm ",
-    "count": 150
-  },
+"psalms": {
+  "label": "Psalms",
+  "folder": "devotionals/psalms",
+  "prefix": "Psalm",  // no space
+  "count": 150
+}
+
   "proverbs": {
     "label": "Proverbs",
     "folder": "devotionals/proverbs",
