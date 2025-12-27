@@ -221,23 +221,24 @@
     placeholder.textContent = "-- Select a track --";
     select.appendChild(placeholder);
 
-    function addGroup(label, folder, prefix, start, end, padDigits, spacer = " ") {
+    function addGroup(label, folder, prefix, start, end, padDigits) {
       const group = document.createElement("optgroup");
       group.label = label;
 
       for (let i = start; i <= end; i++) {
-        // Build filename number respecting padding where needed
+        // Pad numbers where needed
         const filenameNumber = padDigits > 0 ? String(i).padStart(padDigits, "0") : String(i);
 
+        // ✅ One space between prefix and number
         const option = document.createElement("option");
-        option.value = `${folder}/${prefix}${spacer}${filenameNumber}.mp3`; // e.g., Psalm 001.mp3
-        option.textContent = `${prefix} ${i}`; // display clean (no padding)
+        option.value = `${folder}/${prefix} ${filenameNumber}.mp3`;
+        option.textContent = `${prefix} ${i}`;
         group.appendChild(option);
       }
       select.appendChild(group);
     }
 
-    // Loop manifest entries and add groups
+    // Loop manifest entries
     for (const key of Object.keys(manifest)) {
       const b = manifest[key];
       addGroup(b.label || key, b.folder, b.prefix, b.start, b.end, b.padDigits);
@@ -253,6 +254,7 @@
     player.play();
   });
 </script>
+
 
 </body>
 </html>
