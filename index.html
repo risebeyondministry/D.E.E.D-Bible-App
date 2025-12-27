@@ -6,19 +6,6 @@
   <title>D.E.E.D Devotional & Audio Bible</title>
   <link rel="icon" type="image/png" href="assets/deed-logo.png">
 
-  <!-- Social Sharing -->
-  <meta property="og:title" content="D.E.E.D Devotional & Audio Bible" />
-  <meta property="og:description" content="Daily devotionals and audio Bible resources from RiseBeyond Ministry." />
-  <meta property="og:image" content="assets/deed-logo.png" />
-  <meta property="og:url" content="https://risebeyondministry.github.io/D.E.E.D-Bible-App/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="D.E.E.D Devotional & Audio Bible" />
-  <meta name="twitter:description" content="Daily devotionals and audio Bible resources from RiseBeyond Ministry." />
-  <meta name="twitter:image" content="assets/deed-logo.png" />
-
   <!-- CSS Styles -->
   <style>
     body {
@@ -49,10 +36,6 @@
       margin-bottom: 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .small {
-      font-size: 0.9em;
-      color: #555;
-    }
     .button {
       display: inline-block;
       background-color: #0077cc;
@@ -64,23 +47,6 @@
     }
     .button:hover {
       background-color: #005fa3;
-    }
-    details {
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 5px;
-      background: #fdfdfd;
-    }
-    summary {
-      font-weight: bold;
-      cursor: pointer;
-      padding: 5px;
-    }
-    select {
-      margin-top: 8px;
-      width: 100%;
-      padding: 5px;
     }
   </style>
 </head>
@@ -103,7 +69,7 @@
     <img src="devotionals/devotional_images/hisplan.jpg" 
          alt="God's Got You Covered Devotional" 
          style="width:100%; border-radius:10px; margin-top:10px;" />
-    <p class="small" style="margin-top:8px;">
+    <p style="margin-top:8px; font-style:italic;">
       Reflection: How will you view today’s challenges knowing your life is part of God’s pre-written plan?
     </p>
   </section>
@@ -121,7 +87,9 @@
   <!-- Audio Player -->
   <section class="card">
     <h2>Audio Bible</h2>
-    <div id="accordion"></div>
+    <select id="trackSelect">
+      <option value="">-- Select a track --</option>
+    </select>
     <audio id="player" controls></audio>
   </section>
 
@@ -131,88 +99,37 @@
     <a class="button" href="https://wa.me/12845443333">Message on WhatsApp</a>
   </section>
 
-  <!-- Save Instructions -->
-  <section id="howToSave" style="background:#ffffff; padding:20px; border-top:4px solid #004080; margin-top:40px;">
-    <h2 style="color:#004080; text-align:center;">📱 How to Save the D.E.E.D Bible App</h2>
-    <div style="margin:20px 0;">
-      <h3 style="color:#004080;">On Android (Samsung, Huawei, etc.)</h3>
-      <ol style="line-height:1.6;">
-        <li>Open the app link in <strong>Chrome</strong>: 
-          <a href="https://risebeyondministry.github.io/D.E.E.D-Bible-App/" target="_blank">
-            https://risebeyondministry.github.io/D.E.E.D-Bible-App/
-          </a>
-        </li>
-        <li>Tap the <strong>three dots</strong> ⋮ in the top‑right corner.</li>
-        <li>Select <strong>Add to Home screen</strong>.</li>
-        <li>Tap <strong>Add</strong> → the app icon will appear on your home screen.</li>
-      </ol>
-    </div>
-    <div style="margin:20px 0;">
-      <h3 style="color:#004080;">On iPhone (Safari)</h3>
-      <ol style="line-height:1.6;">
-        <li>Open the app link in <strong>Safari</strong>: 
-          <a href="https://risebeyondministry.github.io/D.E.E.D-Bible-App/" target="_blank">
-            https://risebeyondministry.github.io/D.E.E.D-Bible-App/
-          </a>
-        </li>
-        <li>Tap the <strong>Share button</strong> ⬆️ (square with arrow at the bottom).</li>
-        <li>Scroll down and select <strong>Add to Home Screen</strong>.</li>
-        <li>Tap <strong>Add</strong> → the app icon will appear on your home screen.</li>
-      </ol>
-    </div>
-    <p style="text-align:center; color:#666; font-style:italic;">
-      Tip: Once saved, the app opens like a regular mobile app with the D.E.E.D logo as its icon.
-    </p>
-  </section>
-
-  <!-- ✅ Accordion Script -->
+  <!-- ✅ Stable Dropdown Script -->
   <script>
-  const player = document.getElementById("player");
-  const accordion = document.getElementById("accordion");
+    const player = document.getElementById("player");
+    const select = document.getElementById("trackSelect");
 
-  async function buildAccordion() {
-    const response = await fetch("./bible_manifest.json");
-    const manifest = await response.json();
+    async function buildDropdown() {
+      const response = await fetch("./bible_manifest.json");
+      const manifest = await response.json();
 
-    accordion.innerHTML = "";
+      for (const key of Object.keys(manifest)) {
+        const b = manifest[key];
+        const group = document.createElement("optgroup");
+        group.label = b.label;
 
-    for (const key of Object.keys(manifest)) {
-      const b = manifest[key];
-
-      // Accordion section
-      const details = document.createElement("details");
-      const summary = document.createElement("summary");
-      summary.textContent = b.label;
-      details.appendChild(summary);
-
-      // Dropdown for chapters
-      const select = document.createElement("select");
-      const placeholder = document.createElement("option");
-      placeholder.value = "";
-      placeholder.textContent = `-- Select ${b.label} --`;
-      select.appendChild(placeholder);
-
-      for (let i = 1; i <= b.count; i++) {
-        const option = document.createElement("option");
-        option.value = `${b.folder}/${b.prefix}${i}.mp3`;
-        option.textContent = `${b.prefix}${i}`;
-        select.appendChild(option);
+        for (let i = 1; i <= b.count; i++) {
+          const option = document.createElement("option");
+          option.value = `${b.folder}/${b.prefix}${i}.mp3`;
+          option.textContent = `${b.prefix}${i}`;
+          group.appendChild(option);
+        }
+        select.appendChild(group);
       }
-
-      // Playback
-      select.addEventListener("change", () => {
-        if (!select.value) return;
-        player.src = select.value;
-        player.load();
-      });
-
-      details.appendChild(select);
-      accordion.appendChild(details);
     }
-  }
 
-  buildAccordion();
-</script>
+    buildDropdown();
 
+    select.addEventListener("change", () => {
+      if (!select.value) return;
+      player.src = select.value;
+      player.load();
+    });
+  </script>
 </body>
 </html>
