@@ -1,0 +1,23 @@
+{
+  "psalms": {
+    "label": "Psalms",
+    "folder": "devotionals/psalms",
+    "prefix": "Psalm",
+    "count": 150,
+    "padDigits": 3
+  },
+  "proverbs": {
+    "label": "Proverbs",
+    "folder": "devotionals/proverbs",
+    "prefix": "Proverbs",
+    "count": 31,
+    "padDigits": 2
+  },
+  "matthew": {
+    "label": "Matthew",
+    "folder": "devotionals/matthew",
+    "prefix": "Matthew",
+    "count": 28,
+    "padDigits": 0
+  }
+}
