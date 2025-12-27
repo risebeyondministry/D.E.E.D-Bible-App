@@ -167,51 +167,52 @@
 
   <!-- ✅ Accordion Script -->
   <script>
-    const player = document.getElementById("player");
-    const accordion = document.getElementById("accordion");
+  const player = document.getElementById("player");
+  const accordion = document.getElementById("accordion");
 
-    async function buildAccordion() {
-      const response = await fetch("./bible_manifest.json");
-      const manifest = await response.json();
+  async function buildAccordion() {
+    const response = await fetch("./bible_manifest.json");
+    const manifest = await response.json();
 
-      accordion.innerHTML = "";
+    accordion.innerHTML = "";
 
-      for (const key of Object.keys(manifest)) {
-        const b = manifest[key];
+    for (const key of Object.keys(manifest)) {
+      const b = manifest[key];
 
-        // Accordion section
-        const details = document.createElement("details");
-        const summary = document.createElement("summary");
-        summary.textContent = b.label;
-        details.appendChild(summary);
+      // Accordion section
+      const details = document.createElement("details");
+      const summary = document.createElement("summary");
+      summary.textContent = b.label;
+      details.appendChild(summary);
 
-        // Dropdown for chapters
-        const select = document.createElement("select");
-        const placeholder = document.createElement("option");
-        placeholder.value = "";
-        placeholder.textContent = `-- Select ${b.label} --`;
-        select.appendChild(placeholder);
+      // Dropdown for chapters
+      const select = document.createElement("select");
+      const placeholder = document.createElement("option");
+      placeholder.value = "";
+      placeholder.textContent = `-- Select ${b.label} --`;
+      select.appendChild(placeholder);
 
-        for (let i = 1; i <= b.count; i++) {
-          const option = document.createElement("option");
-          option.value = `${b.folder}/${b.prefix}${i}.mp3`;
-          option.textContent = `${b.prefix}${i}`;
-          select.appendChild(option);
-        }
-
-        // Playback
-        select.addEventListener("change", () => {
-          if (!select.value) return;
-          player.src = select.value;
-          player.load();
-        });
-
-        details.appendChild(select);
-        accordion.appendChild(details);
+      for (let i = 1; i <= b.count; i++) {
+        const option = document.createElement("option");
+        option.value = `${b.folder}/${b.prefix}${i}.mp3`;
+        option.textContent = `${b.prefix}${i}`;
+        select.appendChild(option);
       }
-    }
 
-    buildAccordion();
-  </script>
+      // Playback
+      select.addEventListener("change", () => {
+        if (!select.value) return;
+        player.src = select.value;
+        player.load();
+      });
+
+      details.appendChild(select);
+      accordion.appendChild(details);
+    }
+  }
+
+  buildAccordion();
+</script>
+
 </body>
 </html>
