@@ -2,175 +2,175 @@
   "psalms": {
     "label": "Psalms",
     "folder": "devotionals/psalms",
-    "prefix": "Psalm",
+    "prefix": "Psalm ",
     "count": 150
   },
   "proverbs": {
     "label": "Proverbs",
     "folder": "devotionals/proverbs",
-    "prefix": "Proverbs",
+    "prefix": "Proverbs ",
     "count": 31
   },
   "matthew": {
     "label": "Matthew",
     "folder": "devotionals/newtestament/matthew",
-    "prefix": "Matthew",
+    "prefix": "Matthew ",
     "count": 28
   },
   "mark": {
     "label": "Mark",
     "folder": "devotionals/newtestament/mark",
-    "prefix": "Mark",
+    "prefix": "Mark ",
     "count": 16
   },
   "luke": {
     "label": "Luke",
     "folder": "devotionals/newtestament/luke",
-    "prefix": "Luke",
+    "prefix": "Luke ",
     "count": 24
   },
   "john": {
     "label": "John",
     "folder": "devotionals/newtestament/john",
-    "prefix": "John",
+    "prefix": "John ",
     "count": 21
   },
   "acts": {
     "label": "Acts",
     "folder": "devotionals/newtestament/acts",
-    "prefix": "Acts",
+    "prefix": "Acts ",
     "count": 28
   },
   "romans": {
     "label": "Romans",
     "folder": "devotionals/newtestament/romans",
-    "prefix": "Romans",
+    "prefix": "Romans ",
     "count": 16
   },
   "1corinthians": {
     "label": "1 Corinthians",
     "folder": "devotionals/newtestament/1corinthians",
-    "prefix": "1Corinthians",
+    "prefix": "1 Corinthians ",
     "count": 16
   },
   "2corinthians": {
     "label": "2 Corinthians",
     "folder": "devotionals/newtestament/2corinthians",
-    "prefix": "2Corinthians",
+    "prefix": "2 Corinthians ",
     "count": 13
   },
   "galatians": {
     "label": "Galatians",
     "folder": "devotionals/newtestament/galatians",
-    "prefix": "Galatians",
+    "prefix": "Galatians ",
     "count": 6
   },
   "ephesians": {
     "label": "Ephesians",
     "folder": "devotionals/newtestament/ephesians",
-    "prefix": "Ephesians",
+    "prefix": "Ephesians ",
     "count": 6
   },
   "philippians": {
     "label": "Philippians",
     "folder": "devotionals/newtestament/philippians",
-    "prefix": "Philippians",
+    "prefix": "Philippians ",
     "count": 4
   },
   "colossians": {
     "label": "Colossians",
     "folder": "devotionals/newtestament/colossians",
-    "prefix": "Colossians",
+    "prefix": "Colossians ",
     "count": 4
   },
   "1thessalonians": {
     "label": "1 Thessalonians",
     "folder": "devotionals/newtestament/1thessalonians",
-    "prefix": "1Thessalonians",
+    "prefix": "1 Thessalonians ",
     "count": 5
   },
   "2thessalonians": {
     "label": "2 Thessalonians",
     "folder": "devotionals/newtestament/2thessalonians",
-    "prefix": "2Thessalonians",
+    "prefix": "2 Thessalonians ",
     "count": 3
   },
   "1timothy": {
     "label": "1 Timothy",
     "folder": "devotionals/newtestament/1timothy",
-    "prefix": "1Timothy",
+    "prefix": "1 Timothy ",
     "count": 6
   },
   "2timothy": {
     "label": "2 Timothy",
     "folder": "devotionals/newtestament/2timothy",
-    "prefix": "2Timothy",
+    "prefix": "2 Timothy ",
     "count": 4
   },
   "titus": {
     "label": "Titus",
     "folder": "devotionals/newtestament/titus",
-    "prefix": "Titus",
+    "prefix": "Titus ",
     "count": 3
   },
   "philemon": {
     "label": "Philemon",
     "folder": "devotionals/newtestament/philemon",
-    "prefix": "Philemon",
+    "prefix": "Philemon ",
     "count": 1
   },
   "hebrews": {
     "label": "Hebrews",
     "folder": "devotionals/newtestament/hebrews",
-    "prefix": "Hebrews",
+    "prefix": "Hebrews ",
     "count": 13
   },
   "james": {
     "label": "James",
     "folder": "devotionals/newtestament/james",
-    "prefix": "James",
+    "prefix": "James ",
     "count": 5
   },
   "1peter": {
     "label": "1 Peter",
     "folder": "devotionals/newtestament/1peter",
-    "prefix": "1Peter",
+    "prefix": "1 Peter ",
     "count": 5
   },
   "2peter": {
     "label": "2 Peter",
     "folder": "devotionals/newtestament/2peter",
-    "prefix": "2Peter",
+    "prefix": "2 Peter ",
     "count": 3
   },
   "1john": {
     "label": "1 John",
     "folder": "devotionals/newtestament/1john",
-    "prefix": "1John",
+    "prefix": "1 John ",
     "count": 5
   },
   "2john": {
     "label": "2 John",
     "folder": "devotionals/newtestament/2john",
-    "prefix": "2John",
+    "prefix": "2 John ",
     "count": 1
   },
   "3john": {
     "label": "3 John",
     "folder": "devotionals/newtestament/3john",
-    "prefix": "3John",
+    "prefix": "3 John ",
     "count": 1
   },
   "jude": {
     "label": "Jude",
     "folder": "devotionals/newtestament/jude",
-    "prefix": "Jude",
+    "prefix": "Jude ",
     "count": 1
   },
   "revelation": {
     "label": "Revelation",
     "folder": "devotionals/newtestament/revelation",
-    "prefix": "Revelation",
+    "prefix": "Revelation ",
     "count": 22
   }
 }
