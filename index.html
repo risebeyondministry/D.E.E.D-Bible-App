@@ -92,6 +92,7 @@
      alt="God's Got You Covered Devotional" 
      style="width:100%; border-radius:10px; margin-top:10px;" />
 
+
     <p class="small" style="margin-top:8px;">
       Reflection: How will you view today’s challenges knowing your life is part of God’s pre-written plan?
     </p>
@@ -204,6 +205,59 @@
       Tip: Once saved, the app opens like a regular mobile app with the D.E.E.D logo as its icon.
     </p>
   </section>
+
+<script>
+  const player = document.getElementById("player");
+  const select = document.getElementById("trackSelect");
+
+  async function buildDropdown() {
+    try {
+      const response = await fetch("bible_manifest.json");
+      const manifest = await response.json();
+
+      select.innerHTML = "";
+      const placeholder = document.createElement("option");
+      placeholder.value = "";
+      placeholder.textContent = "-- Select a track --";
+      select.appendChild(placeholder);
+
+      function addGroup(label, folder, prefix, count, padDigits) {
+        const group = document.createElement("optgroup");
+        group.label = label;
+        for (let i = 1; i <= count; i++) {
+          const filenameNumber = padDigits > 0 ? String(i).padStart(padDigits, "0") : i;
+          const option = document.createElement("option");
+          option.value = `${folder}/${prefix} ${filenameNumber}.mp3`;
+          option.textContent = `${prefix} ${i}`;
+          group.appendChild(option);
+        }
+        select.appendChild(group);
+      }
+
+      for (const [book, data] of Object.entries(manifest)) {
+        addGroup(
+          data.label || book,
+          data.folder,
+          data.prefix,
+          data.count,
+          data.padDigits
+        );
+      }
+    } catch (err) {
+      console.error("Error loading manifest:", err);
+    }
+  }
+
+  buildDropdown();
+
+  select.addEventListener("change", () => {
+    if (select.value) {
+      player.src = select.value;
+      player.load();
+      player.play();
+    }
+  });
+</script>
 
 </body>
 </html>
