@@ -1,23 +1,30 @@
 {
-  "psalms": {
-    "label": "Psalms",
+  "psalms_1_99": {
+    "label": "Psalms (1–99)",
+    "folder": "devotionals/psalms",
+    "prefix": "Psalm",
+    "count": 99,
+    "padDigits": 3
+  },
+  "psalms_100_150": {
+    "label": "Psalms (100–150)",
     "folder": "devotionals/psalms",
     "prefix": "Psalm",
     "count": 150,
-    "padDigits": 3
+    "padDigits": 0
   },
-  "proverbs": {
-    "label": "Proverbs",
+  "proverbs_1_9": {
+    "label": "Proverbs (1–9)",
+    "folder": "devotionals/proverbs",
+    "prefix": "Proverbs",
+    "count": 9,
+    "padDigits": 2
+  },
+  "proverbs_10_31": {
+    "label": "Proverbs (10–31)",
     "folder": "devotionals/proverbs",
     "prefix": "Proverbs",
     "count": 31,
-    "padDigits": 2
-  },
-  "matthew": {
-    "label": "Matthew",
-    "folder": "devotionals/matthew",
-    "prefix": "Matthew",
-    "count": 28,
     "padDigits": 0
   }
 }
